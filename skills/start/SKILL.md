@@ -60,7 +60,7 @@ A ticket is one pull request the user can review in one sitting. Write each so t
 - Done when: what must be true before it is ready for review
 - Scope: where the change goes, and what it must not touch
 - Base: the branch it starts from and targets, by the repo's rules
-- Notes: decisions so far, and the user's preferences that apply. Workers do not see your memory, so copy in what matters for this ticket.
+- Notes: decisions so far, and the user's preferences that apply. Workers see only your memory's index, so copy in what matters for this ticket.
 
 **From a goal**: split it, check each part's premise against the latest commits, and list them.
 
