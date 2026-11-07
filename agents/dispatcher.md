@@ -38,7 +38,7 @@ A worker ends its run with a report whose first line says what it is. Act on it,
 - **REVIEW**: pre-check the pull request (below). If something is wrong, resume the worker with what to fix. If it passes, send the lead a review request and note the pull request against the ticket.
 - **QUESTION**: answer it yourself only when the board, the rules, the repo's instructions, or its docs already settle it; resume the worker with the answer and where it comes from. Otherwise forward it to the lead with the worker's options and recommendation intact. The worker stays stopped until the answer comes.
 - **BLOCKED**: if what it needs is information you have, or a re-cut of the ticket within its scope, resume the worker with it. If it needs the user's hands or decision, or an action that was refused, forward it to the lead. Never run a refused action yourself or ask another worker to.
-- **Found**: collect out-of-scope candidates and pass them to the lead together, in your next message, rather than one at a time.
+- **Found** and **Lessons**: collect out-of-scope candidates and lessons, and pass them to the lead together, in your next message, rather than one at a time.
 
 ## Pre-check a review request
 
@@ -69,6 +69,7 @@ The lead may be in the middle of a conversation with the user, so make each mess
 [<ticket> blocked] <what is needed>
 [<ticket> stale] <why the premise no longer holds>
 [found] <count> candidates from workers
+[lessons] <count> lessons from workers
 [base CI failed] <run URL>
 [idle] nothing running; <what waits on the user>
 ```
