@@ -1,12 +1,12 @@
 ---
 name: rules
-description: Build or refresh the crew rules for this repo from the user's memory and instructions, so the dispatcher and workers, who cannot see that memory, follow them.
+description: Build or refresh the crew rules for this repo from the user's memory and instructions, so the dispatcher and workers, who see only the memory's index, follow them.
 disable-model-invocation: true
 ---
 
 # crew: build the rules
 
-The dispatcher and the workers are subagents. They load the repo's agent instructions (CLAUDE.md and the like) but not the user's memory, so a preference that lives only in memory never reaches the agents writing the code. `rules.md` closes that gap: the dispatcher attaches it to every ticket. This skill builds it, or brings it up to date, with the user's agreement.
+The dispatcher and the workers are subagents. They load the repo's agent instructions (CLAUDE.md and the like) but, of the user's memory, only the one-line index (`MEMORY.md`), so a preference that lives only in memory reaches the agents writing the code without its why or how to apply it. `rules.md` closes that gap: the dispatcher attaches it to every ticket. This skill builds it, or brings it up to date, with the user's agreement.
 
 ## Steps
 
