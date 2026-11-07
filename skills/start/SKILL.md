@@ -81,6 +81,7 @@ Its messages start with `[<ticket> <kind>]`:
 - **blocked**: needs the user's hands or decision → put it to the user. Otherwise help the dispatcher.
 - **stale**: note it on the board.
 - **found**: keep the candidates for the next list.
+- **lessons**: keep them for the two piles of lessons at the end.
 - **base CI failed**: tell the user what broke and propose a ticket.
 - **idle**: nothing is running and everything waits on the user. Nothing to do.
 
