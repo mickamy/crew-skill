@@ -96,6 +96,7 @@ So the dispatcher waits only on child agents, and CI waits happen inside its chi
   - The lead compares memory modification times with the `Built:` time in `rules.md` and suggests a rebuild when memory changed.
   - When the user corrects the crew in a way that should hold next time, the lead offers to add it to `rules.md`.
   - The dispatcher attaches `rules.md` to every ticket, and the lead copies ticket-specific preferences into the ticket.
+- Workers do not write to the user's memory. A write there outlives the run without the user's approval, sets off the lead's rebuild suggestion, and races with the other workers on the `MEMORY.md` index. Subagents get no instructions for using memory, but the index shows where it lives, so the worker's definition forbids it explicitly. What should hold beyond a ticket goes in the worker's report under "Lessons"; the dispatcher passes it on, and the lead keeps it for the piles below.
 - At the end of a run, the lead sorts lessons into two piles: for this repo (to `rules.md`, or a proposal for the repo's agent instructions) and about crew itself (for crew's maintainers). The lead never edits the installed plugin.
 
 ## Procedure defaults
