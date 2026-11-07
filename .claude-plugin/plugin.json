@@ -1,0 +1,13 @@
+{
+  "name": "crew",
+  "version": "0.1.0",
+  "description": "A crew of Claude Code agents for your repo: you talk to one lead, a dispatcher hands tickets to workers, and nothing merges without your approval.",
+  "author": {
+    "name": "Tetsuro Mikami",
+    "url": "https://github.com/mickamy"
+  },
+  "homepage": "https://github.com/mickamy/crew-skill",
+  "repository": "https://github.com/mickamy/crew-skill",
+  "license": "MIT",
+  "keywords": ["agents", "subagents", "worktree", "pull-requests", "code-review"]
+}

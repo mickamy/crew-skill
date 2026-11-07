@@ -1,0 +1,14 @@
+{
+  "name": "crew-skill",
+  "description": "Marketplace for the crew plugin",
+  "owner": {
+    "name": "Tetsuro Mikami"
+  },
+  "plugins": [
+    {
+      "name": "crew",
+      "source": "./",
+      "description": "A crew of Claude Code agents for your repo: you talk to one lead, a dispatcher hands tickets to workers, and nothing merges without your approval."
+    }
+  ]
+}
