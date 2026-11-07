@@ -130,7 +130,7 @@ Base: <branch> · Approval: conversation[, labels] · Workers: 3 · Started: <da
 - Start the dispatcher with the Agent tool, `subagent_type: "crew:dispatcher"`, in the background. Start scouts the same way with `subagent_type: "crew:scout"`.
 - Send to the dispatcher with `SendMessage`; it answers to `main`, which is you. A dispatcher that stopped resumes when you send it a message.
 - After compaction, or when this session is resumed, read the board and `rules.md` again, then resume the dispatcher.
-- Your auto memory directory is named in your system prompt. To see whether it changed after the last `/crew:rules`, compare its files' modification times with `rules.md`'s.
+- Your auto memory directory is named in your system prompt. To see whether it changed after the last `/crew:rules`, compare its files' modification times with the `Built:` time at the top of `rules.md`.
 - With labels in use, keep a Monitor that polls every two minutes for open pull requests carrying `user-approved` (and, for pull requests by other accounts, approving reviews by the user) and prints each new one; re-arm it when it expires.
 - Run `gh pr merge` alone in its Bash call.
 - Permission prompts from every agent in the crew appear in this terminal.
