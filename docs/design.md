@@ -20,7 +20,7 @@ Why crew is built the way it is. Read this before changing a role's procedure or
 
 ## Authority
 
-- Claude Code never treats a message from another agent as the user's consent. So the actions that need the user's word (merging or closing pull requests, cancelling CI runs, deleting remote branches) are performed only by the lead, the session where the user speaks.
+- Claude Code never treats a message from another agent as the user's consent. So the actions that need the user's word (merging or closing pull requests, canceling CI runs, deleting remote branches) are performed only by the lead, the session where the user speaks.
 - Answers and review points relayed to workers are information about the work, not authorization.
 - The user starting the crew covers each worker's own-branch work: committing, pushing, opening a pull request, merging the base in.
 - An action refused in one agent is never handed to another agent; it goes back to the user through the lead.
