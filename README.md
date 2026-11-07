@@ -67,7 +67,7 @@ An approval goes stale when commits that change the content land after it, and t
 - **Writes**: `.crew/board.md` (tickets and decisions, written by the lead) and `.crew/rules.md`, with a `.gitignore` inside `.crew/` that ignores the directory itself, so no tracked file changes. If your instructions name a place for working files, crew uses `<that place>/crew/` instead.
 - **On GitHub**: branches and pull requests for the tickets, and the two labels above only if you created them.
 
-Workers are subagents, and subagents do not see your memory. Run `/crew:rules` so that the preferences you keep in memory reach them.
+Workers are subagents, and subagents see only the one-line index of your memory, not the memories themselves. Run `/crew:rules` so that the preferences you keep in memory reach them.
 
 ## Good to know
 
