@@ -91,7 +91,7 @@ So the dispatcher waits only on child agents, and CI waits happen inside its chi
 
 - crew decides roles, authority, approval, state, how to talk with the user, the ticket format, each role's procedure, pull request pre-checks, and how CI is waited on.
 - The repo decides everything else, and crew reads it every time: base branches and when each applies, branch names, commit and pull request conventions, merge method, tests, the CI jobs expected per path, shared resources, the policy for dependency updates, the docs to update. Sources: CLAUDE.md and AGENTS.md, CONTRIBUTING, docs, `.github/workflows`.
-- Subagents load the CLAUDE.md hierarchy but not the main conversation's auto memory, so the dispatcher and the workers never see the user's memory. Therefore:
+- Subagents load the CLAUDE.md hierarchy and the index of the user's auto memory (`MEMORY.md`), but not the memory files themselves or the instructions for using memory. The index holds a one-line hook per memory, without the why or how to apply it, so the dispatcher and the workers do not get the user's preferences from it. Therefore:
   - `/crew:rules` builds `rules.md` from the user's memory and instructions: only how-to-work items, judged by content rather than by how the memory is labeled, one or two lines each with the source. The user sees the change before it is written.
   - The lead compares memory modification times with the `Built:` time in `rules.md` and suggests a rebuild when memory changed.
   - When the user corrects the crew in a way that should hold next time, the lead offers to add it to `rules.md`.
